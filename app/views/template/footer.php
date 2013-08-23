@@ -1,0 +1,7 @@
+
+	<hr />
+
+	footer
+
+</body>
+</html>
