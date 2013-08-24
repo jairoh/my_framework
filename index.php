@@ -12,6 +12,6 @@
 	*/
 	
 	require_once( 'system/core/config.php' );
-	$config = new Config();
+	$config = new System\Core\Config();
 
 

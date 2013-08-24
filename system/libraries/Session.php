@@ -10,7 +10,7 @@ Class Session {
 	* This constructor starts the session
 	*/
 	function __construct () {
-		session_start();
+		session_start(); 
 	}
 
 
