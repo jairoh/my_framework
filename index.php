@@ -11,7 +11,7 @@
 	| (app/controllers or the default controller )	
 	*/
 	
-	require_once( 'system/core/config.php' );
+	require_once( 'system/core/Config.php' );
 	$config = new System\Core\Config();
 
 
