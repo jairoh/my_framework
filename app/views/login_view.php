@@ -1,18 +1,20 @@
+<script type="text/javascript" src="<?= BASE_URL ?>js/page_scripts/login_script.js" ></script>
+
 <h1>Login</h1>
 
 <?php
-echo Form::open( BASE_URL . 'login/do_login' );
-	echo Form::label( 'email', 'Email:' );
+Form::open( BASE_URL . 'login/do_login', 'id="login_form"' );
+	Form::label( 'email', 'Email:' );
 	echo "<br />";
-	echo Form::text( 'email' );
+	Form::text( 'email' );
 	echo "<br />";
 
-	echo Form::label( 'password', 'Password:' );
+	Form::label( 'password', 'Password:' );
 	echo "<br />";
-	echo Form::password();
+	Form::password();
 
-	echo Form::submit( 'login', 'Login' );
-echo Form::close();
+	Form::submit( 'login', 'Login' );
+Form::close();
 
 $options = array(
                   'small'  => 'Small Shirt',
@@ -21,4 +23,4 @@ $options = array(
                   'xlarge' => 'Extra Large Shirt',
                 );
 
-echo Form::select( 'shirts', $options, 'med', 'class="optiones"' );
+Form::select( 'shirts', $options, 'med', 'class="optiones"' );

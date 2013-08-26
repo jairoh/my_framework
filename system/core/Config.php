@@ -50,7 +50,7 @@ Class Config {
 			if ( !preg_match( '/database/', $arr [ 2 ] ) ) {
 				require_once( $file );
 
-				//autoload the specified helpers/libraries
+				//autoload the specified helpers/libraries in the system folder
 				if ( preg_match( '/autoload/' , $arr [ 2 ] ) ) 
 					foreach ( $autoload [ 'libraries' ] as $library ) 
 						require( "system/libraries/$library.php" );	

@@ -65,6 +65,22 @@ Class Database extends PDO{
 	}
 
 
+	/**
+	*----------------------------------------------------------------------------------
+	* function execute
+	*---------------------------------------------------------------------------------- 
+	* This will execute query to the database(UPDATE,INSERT & etc..)
+	*@param 	view_name = name of the model
+	*@param 	data = array passed for conditioning ?, ?, ?
+	*@author 	Jairoh Tuada
+	*/
+	
+	function execute ( $sql, $param_conditions ) {
+		$query = $this->prepare( $sql );
+		$query->execute( $this->escape_array_params( $param_conditions ) );
+	}
+
+
 
 
 	/**

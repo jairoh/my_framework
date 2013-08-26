@@ -6,4 +6,4 @@
 |---------------------------------------------------------------------------------- 
 | Holds the libraries to be autoloaded
 */
-$autoload [ 'libraries' ] = array( 'Form', 'Pagination', 'Session' ); 
+$autoload [ 'libraries' ] = array( 'Input' , 'Form', 'Pagination', 'Session' ); 

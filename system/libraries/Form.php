@@ -11,12 +11,13 @@ Class Form {
 	*---------------------------------------------------------------------------------- 
 	* This will open the form
 	*@param 	action = action path
+	*@param 	attributes = attributes
 	*@param 	method = POST/GET, default is POST
 	*@return 	<form .* >
 	*@author 	Jairoh Tuada
 	*/
-	function open ( $action = BASE_URL, $method = 'POST'  ) {
-		return "<form action='$action' accept-charset='utf-8' method='$method' >";
+	function open ( $action = BASE_URL, $attributes = '' , $method = 'POST' ) {
+		echo "<form $attributes action='$action' accept-charset='utf-8' method='$method' >";
 	}
 
 	/**
@@ -25,12 +26,13 @@ Class Form {
 	*---------------------------------------------------------------------------------- 
 	* This will open the form multipart
 	*@param 	action = action path
+	*@param 	attributes = attributes
 	*@param 	method = POST/GET, default is POST
 	*@return 	<form .* multiplart >
 	*@author 	Jairoh Tuada
 	*/
-	function open_multipart ( $action = BASE_URL, $method = 'POST'  ) {
-		return "<form action='$action' accept-charset='utf-8' method='$method' enctype='multipart/form-data' >";
+	function open_multipart ( $action = BASE_URL, $attributes = '', $method = 'POST'  ) {
+		echo "<form $attributes action='$action' accept-charset='utf-8' method='$method' enctype='multipart/form-data' >";
 	}
 
 
@@ -44,7 +46,7 @@ Class Form {
 	*/
 	
 	function close() {
-		return "</form>";
+		echo "</form>";
 	}
 
 	/**
@@ -59,7 +61,7 @@ Class Form {
 	*/
 
 	function label ( $for = '', $value = '', $attributes = '' ) {
-		return "<label for='$for' $attributes >$value</label>";
+		echo "<label for='$for' $attributes >$value</label>";
 	}
 	
 	/**
@@ -74,7 +76,22 @@ Class Form {
 	*/
 
 	function text ( $name = 'text', $value = '', $attributes = '' ) {
-		return "<input type='text' name='$name' value='$value' $attributes />";
+		echo "<input type='text' name='$name' value='$value' $attributes />";
+	}
+
+	/**
+	*----------------------------------------------------------------------------------
+	* function email
+	*---------------------------------------------------------------------------------- 
+	* This will create an input email
+	*@param 	name = name
+	*@param 	attr = attributes
+	*@return 	email input
+	*@author 	Jairoh Tuada
+	*/
+
+	function email ( $name = 'email', $value = '', $attributes = '' ) {
+		echo "<input type='email' name='$name' value='$value' $attributes />";
 	}
 
 	/**
@@ -89,7 +106,7 @@ Class Form {
 	*/
 
 	function password ( $name = 'password' , $attributes = '' ) {
-		return "<input type='password' name='$name' $attributes />";
+		echo "<input type='password' name='$name' $attributes />";
 	}
 
 	/**
@@ -104,7 +121,7 @@ Class Form {
 	*/
 
 	function submit ( $name = 'submit', $value = 'Submit', $attributes = '' ) {
-		return "<input type='submit' name='$name' value='$value' $attributes  />";
+		echo "<input type='submit' name='$name' value='$value' $attributes  />";
 	}
 
 
@@ -120,7 +137,7 @@ Class Form {
 	*/
 
 	function button ( $name = 'button', $value = 'Button', $attributes = '' ) {
-		return "<input type='button' name='$name' value='$value' $attributes  />";
+		echo "<input type='button' name='$name' value='$value' $attributes  />";
 	}
 
 	/**
@@ -135,7 +152,7 @@ Class Form {
 	*/
 
 	function hidden ( $name = 'hidden', $value = '', $attributes = '' ) {
-		return "<input type='hidden' name='$name' value='$value' $attributes  />";
+		echo "<input type='hidden' name='$name' value='$value' $attributes  />";
 	}
 
 	/**
@@ -150,7 +167,7 @@ Class Form {
 	*/
 
 	function textarea ( $name = 'textarea', $value = '', $attributes = '' ) {
-		return "<textarea name='$name' $attributes >$value</textarea>";
+		echo "<textarea name='$name' $attributes >$value</textarea>";
 	}
 
 	/**
@@ -184,7 +201,7 @@ Class Form {
 
 		$output .= "</select>";
 
-		return $output;
+		echo $output;
 	}
 
 
