@@ -1,4 +1,4 @@
-$( document ).ready( function () {
+/*$( document ).ready( function () {
 	
 
 	$( '#login_form' ).submit( function () {
@@ -14,4 +14,4 @@ $( document ).ready( function () {
 		return false;
 	} );
 
-} );
+} );*/

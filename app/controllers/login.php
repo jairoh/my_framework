@@ -51,8 +51,10 @@ Class Login extends BaseController{
 				$this->session->set( 'password', $password );
 
 				header( 'Location: ' . BASE_URL . "home" );
-			} else echo 'does not exists';
-
+			} else { 
+				echo 'does not exists';
+				$this->display(); //redisplay the login view
+			}
 		} else die( 'Page not found' );
 	}
 

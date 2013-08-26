@@ -205,6 +205,20 @@ Class Form {
 	}
 
 
+	/**
+	*----------------------------------------------------------------------------------
+	* function set_value
+	*---------------------------------------------------------------------------------- 
+	* This will a return the value of a form element requested or it's default
+	*@param 	name = form element name
+	*@param 	default_value = default value of the element
+	*@return 	post requested value of the form element or the default value
+	*@author 	Jairoh Tuada
+	*/
+
+	function set_value ( $name, $default_value ) {
+		return ( isset ( $_POST [ $name ] ) )? htmlentities( $_POST [ $name ] ) : $default_value;
+	}
 
 
 }	

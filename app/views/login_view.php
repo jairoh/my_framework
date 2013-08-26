@@ -6,12 +6,12 @@
 Form::open( BASE_URL . 'login/do_login', 'id="login_form"' );
 	Form::label( 'email', 'Email:' );
 	echo "<br />";
-	Form::text( 'email' );
+	Form::text( 'email', Form::set_value( 'email', 'ambot@gmail.com' ) );
 	echo "<br />";
 
 	Form::label( 'password', 'Password:' );
 	echo "<br />";
-	Form::password();
+	Form::password( 'password' );
 
 	Form::submit( 'login', 'Login' );
 Form::close();
